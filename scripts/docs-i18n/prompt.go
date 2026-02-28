@@ -17,6 +17,8 @@ func prettyLanguageLabel(lang string) string {
 		return "Simplified Chinese"
 	case strings.EqualFold(trimmed, "ja-JP"):
 		return "Japanese"
+	case strings.EqualFold(trimmed, "es"):
+		return "Spanish"
 	default:
 		return trimmed
 	}

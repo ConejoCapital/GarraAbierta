@@ -1886,6 +1886,540 @@
             ]
           }
         ]
+      },
+      {
+        "language": "es",
+        "tabs": [
+          {
+            "tab": "Primeros pasos",
+            "groups": [
+              {
+                "group": "Inicio",
+                "pages": ["es/index"]
+              },
+              {
+                "group": "Descripción general",
+                "pages": ["es/start/showcase"]
+              },
+              {
+                "group": "Conceptos clave",
+                "pages": ["es/concepts/features"]
+              },
+              {
+                "group": "Primeros pasos",
+                "pages": [
+                  "es/start/getting-started",
+                  "es/start/onboarding-overview",
+                  "es/start/wizard",
+                  "es/start/onboarding"
+                ]
+              },
+              {
+                "group": "Guías",
+                "pages": ["es/start/openclaw"]
+              }
+            ]
+          },
+          {
+            "tab": "Instalación",
+            "groups": [
+              {
+                "group": "Resumen de instalación",
+                "pages": ["es/install/index", "es/install/installer"]
+              },
+              {
+                "group": "Otros métodos de instalación",
+                "pages": [
+                  "es/install/docker",
+                  "es/install/podman",
+                  "es/install/nix",
+                  "es/install/ansible",
+                  "es/install/bun"
+                ]
+              },
+              {
+                "group": "Mantenimiento",
+                "pages": ["es/install/updating", "es/install/migrating", "es/install/uninstall"]
+              },
+              {
+                "group": "Hosting y despliegue",
+                "pages": [
+                  "es/install/fly",
+                  "es/install/hetzner",
+                  "es/install/gcp",
+                  "es/install/macos-vm",
+                  "es/install/exe-dev",
+                  "es/install/railway",
+                  "es/install/render",
+                  "es/install/northflank"
+                ]
+              },
+              {
+                "group": "Avanzado",
+                "pages": ["es/install/development-channels"]
+              }
+            ]
+          },
+          {
+            "tab": "Canales",
+            "groups": [
+              {
+                "group": "Descripción general",
+                "pages": ["es/channels/index"]
+              },
+              {
+                "group": "Plataformas de mensajería",
+                "pages": [
+                  "es/channels/whatsapp",
+                  "es/channels/telegram",
+                  "es/channels/discord",
+                  "es/channels/irc",
+                  "es/channels/slack",
+                  "es/channels/feishu",
+                  "es/channels/googlechat",
+                  "es/channels/mattermost",
+                  "es/channels/signal",
+                  "es/channels/imessage",
+                  "es/channels/bluebubbles",
+                  "es/channels/msteams",
+                  "es/channels/synology-chat",
+                  "es/channels/line",
+                  "es/channels/matrix",
+                  "es/channels/nextcloud-talk",
+                  "es/channels/nostr",
+                  "es/channels/tlon",
+                  "es/channels/twitch",
+                  "es/channels/zalo",
+                  "es/channels/zalouser"
+                ]
+              },
+              {
+                "group": "Configuración",
+                "pages": [
+                  "es/channels/pairing",
+                  "es/channels/group-messages",
+                  "es/channels/groups",
+                  "es/channels/broadcast-groups",
+                  "es/channels/channel-routing",
+                  "es/channels/location",
+                  "es/channels/troubleshooting"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Agentes",
+            "groups": [
+              {
+                "group": "Fundamentos",
+                "pages": [
+                  "es/concepts/architecture",
+                  "es/concepts/agent",
+                  "es/concepts/agent-loop",
+                  "es/concepts/system-prompt",
+                  "es/concepts/context",
+                  "es/concepts/agent-workspace",
+                  "es/concepts/oauth"
+                ]
+              },
+              {
+                "group": "Inicialización",
+                "pages": ["es/start/bootstrapping"]
+              },
+              {
+                "group": "Sesiones y memoria",
+                "pages": [
+                  "es/concepts/session",
+                  "es/concepts/sessions",
+                  "es/concepts/session-pruning",
+                  "es/concepts/session-tool",
+                  "es/concepts/memory",
+                  "es/concepts/compaction"
+                ]
+              },
+              {
+                "group": "Multi-agente",
+                "pages": ["es/concepts/multi-agent", "es/concepts/presence"]
+              },
+              {
+                "group": "Mensajes y entrega",
+                "pages": [
+                  "es/concepts/messages",
+                  "es/concepts/streaming",
+                  "es/concepts/retry",
+                  "es/concepts/queue"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Herramientas",
+            "groups": [
+              {
+                "group": "Descripción general",
+                "pages": ["es/tools/index"]
+              },
+              {
+                "group": "Herramientas integradas",
+                "pages": [
+                  "es/tools/lobster",
+                  "es/tools/llm-task",
+                  "es/tools/exec",
+                  "es/tools/web",
+                  "es/tools/apply-patch",
+                  "es/tools/elevated",
+                  "es/tools/thinking",
+                  "es/tools/reactions"
+                ]
+              },
+              {
+                "group": "Navegador",
+                "pages": [
+                  "es/tools/browser",
+                  "es/tools/browser-login",
+                  "es/tools/chrome-extension",
+                  "es/tools/browser-linux-troubleshooting"
+                ]
+              },
+              {
+                "group": "Coordinación de agentes",
+                "pages": [
+                  "es/tools/agent-send",
+                  "es/tools/subagents",
+                  "es/tools/acp-agents",
+                  "es/tools/multi-agent-sandbox-tools"
+                ]
+              },
+              {
+                "group": "Skills",
+                "pages": [
+                  "es/tools/slash-commands",
+                  "es/tools/skills",
+                  "es/tools/skills-config",
+                  "es/tools/clawhub",
+                  "es/tools/plugin"
+                ]
+              },
+              {
+                "group": "Extensiones",
+                "pages": ["es/plugins/community", "es/plugins/voice-call", "es/plugins/zalouser"]
+              },
+              {
+                "group": "Automatización",
+                "pages": [
+                  "es/automation/hooks",
+                  "es/automation/cron-jobs",
+                  "es/automation/cron-vs-heartbeat",
+                  "es/automation/troubleshooting",
+                  "es/automation/webhook",
+                  "es/automation/gmail-pubsub",
+                  "es/automation/poll",
+                  "es/automation/auth-monitoring"
+                ]
+              },
+              {
+                "group": "Medios y dispositivos",
+                "pages": [
+                  "es/nodes/index",
+                  "es/nodes/troubleshooting",
+                  "es/nodes/images",
+                  "es/nodes/audio",
+                  "es/nodes/camera",
+                  "es/nodes/talk",
+                  "es/nodes/voicewake",
+                  "es/nodes/location-command"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Modelos",
+            "groups": [
+              {
+                "group": "Descripción general",
+                "pages": ["es/providers/index", "es/providers/models"]
+              },
+              {
+                "group": "Conceptos de modelos",
+                "pages": ["es/concepts/models"]
+              },
+              {
+                "group": "Configuración",
+                "pages": ["es/concepts/model-providers", "es/concepts/model-failover"]
+              },
+              {
+                "group": "Proveedores",
+                "pages": [
+                  "es/providers/anthropic",
+                  "es/providers/openai",
+                  "es/providers/openrouter",
+                  "es/providers/litellm",
+                  "es/providers/bedrock",
+                  "es/providers/vercel-ai-gateway",
+                  "es/providers/moonshot",
+                  "es/providers/mistral",
+                  "es/providers/minimax",
+                  "es/providers/opencode",
+                  "es/providers/glm",
+                  "es/providers/zai",
+                  "es/providers/synthetic",
+                  "es/providers/qianfan"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Plataformas",
+            "groups": [
+              {
+                "group": "Resumen de plataformas",
+                "pages": [
+                  "es/platforms/index",
+                  "es/platforms/macos",
+                  "es/platforms/linux",
+                  "es/platforms/windows",
+                  "es/platforms/android",
+                  "es/platforms/ios"
+                ]
+              },
+              {
+                "group": "App complementaria de macOS",
+                "pages": [
+                  "es/platforms/mac/dev-setup",
+                  "es/platforms/mac/menu-bar",
+                  "es/platforms/mac/voicewake",
+                  "es/platforms/mac/voice-overlay",
+                  "es/platforms/mac/webchat",
+                  "es/platforms/mac/canvas",
+                  "es/platforms/mac/child-process",
+                  "es/platforms/mac/health",
+                  "es/platforms/mac/icon",
+                  "es/platforms/mac/logging",
+                  "es/platforms/mac/permissions",
+                  "es/platforms/mac/remote",
+                  "es/platforms/mac/signing",
+                  "es/platforms/mac/release",
+                  "es/platforms/mac/bundled-gateway",
+                  "es/platforms/mac/xpc",
+                  "es/platforms/mac/skills",
+                  "es/platforms/mac/peekaboo"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Gateway y operaciones",
+            "groups": [
+              {
+                "group": "Gateway",
+                "pages": [
+                  "es/gateway/index",
+                  {
+                    "group": "Configuración y operaciones",
+                    "pages": [
+                      "es/gateway/configuration",
+                      "es/gateway/configuration-reference",
+                      "es/gateway/configuration-examples",
+                      "es/gateway/authentication",
+                      "es/gateway/secrets",
+                      "es/gateway/secrets-plan-contract",
+                      "es/gateway/trusted-proxy-auth",
+                      "es/gateway/health",
+                      "es/gateway/heartbeat",
+                      "es/gateway/doctor",
+                      "es/gateway/logging",
+                      "es/gateway/gateway-lock",
+                      "es/gateway/background-process",
+                      "es/gateway/multiple-gateways",
+                      "es/gateway/troubleshooting"
+                    ]
+                  },
+                  {
+                    "group": "Seguridad y sandbox",
+                    "pages": [
+                      "es/gateway/security/index",
+                      "es/gateway/sandboxing",
+                      "es/gateway/sandbox-vs-tool-policy-vs-elevated"
+                    ]
+                  },
+                  {
+                    "group": "Protocolos y APIs",
+                    "pages": [
+                      "es/gateway/protocol",
+                      "es/gateway/bridge-protocol",
+                      "es/gateway/openai-http-api",
+                      "es/gateway/tools-invoke-http-api",
+                      "es/gateway/cli-backends",
+                      "es/gateway/local-models"
+                    ]
+                  },
+                  {
+                    "group": "Red y descubrimiento",
+                    "pages": [
+                      "es/gateway/network-model",
+                      "es/gateway/pairing",
+                      "es/gateway/discovery",
+                      "es/gateway/bonjour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Acceso remoto",
+                "pages": ["es/gateway/remote", "es/gateway/remote-gateway-readme", "es/gateway/tailscale"]
+              },
+              {
+                "group": "Seguridad",
+                "pages": ["es/security/formal-verification"]
+              },
+              {
+                "group": "Interfaces web",
+                "pages": ["es/web/index", "es/web/control-ui", "es/web/dashboard", "es/web/webchat", "es/web/tui"]
+              }
+            ]
+          },
+          {
+            "tab": "Referencia",
+            "groups": [
+              {
+                "group": "Comandos CLI",
+                "pages": [
+                  "es/cli/index",
+                  "es/cli/acp",
+                  "es/cli/agent",
+                  "es/cli/agents",
+                  "es/cli/approvals",
+                  "es/cli/browser",
+                  "es/cli/channels",
+                  "es/cli/clawbot",
+                  "es/cli/completion",
+                  "es/cli/config",
+                  "es/cli/configure",
+                  "es/cli/cron",
+                  "es/cli/daemon",
+                  "es/cli/dashboard",
+                  "es/cli/devices",
+                  "es/cli/directory",
+                  "es/cli/dns",
+                  "es/cli/docs",
+                  "es/cli/doctor",
+                  "es/cli/gateway",
+                  "es/cli/health",
+                  "es/cli/hooks",
+                  "es/cli/logs",
+                  "es/cli/memory",
+                  "es/cli/message",
+                  "es/cli/models",
+                  "es/cli/node",
+                  "es/cli/nodes",
+                  "es/cli/onboard",
+                  "es/cli/pairing",
+                  "es/cli/plugins",
+                  "es/cli/qr",
+                  "es/cli/reset",
+                  "es/cli/sandbox",
+                  "es/cli/secrets",
+                  "es/cli/security",
+                  "es/cli/sessions",
+                  "es/cli/setup",
+                  "es/cli/skills",
+                  "es/cli/status",
+                  "es/cli/system",
+                  "es/cli/tui",
+                  "es/cli/uninstall",
+                  "es/cli/update",
+                  "es/cli/voicecall",
+                  "es/cli/webhooks"
+                ]
+              },
+              {
+                "group": "RPC y API",
+                "pages": ["es/reference/rpc", "es/reference/device-models"]
+              },
+              {
+                "group": "Plantillas",
+                "pages": [
+                  "es/reference/AGENTS.default",
+                  "es/reference/templates/AGENTS",
+                  "es/reference/templates/BOOT",
+                  "es/reference/templates/BOOTSTRAP",
+                  "es/reference/templates/HEARTBEAT",
+                  "es/reference/templates/IDENTITY",
+                  "es/reference/templates/SOUL",
+                  "es/reference/templates/TOOLS",
+                  "es/reference/templates/USER"
+                ]
+              },
+              {
+                "group": "Referencia técnica",
+                "pages": ["es/reference/wizard", "es/reference/token-use", "es/reference/prompt-caching"]
+              },
+              {
+                "group": "Internos de conceptos",
+                "pages": [
+                  "es/concepts/typebox",
+                  "es/concepts/markdown-formatting",
+                  "es/concepts/typing-indicators",
+                  "es/concepts/usage-tracking",
+                  "es/concepts/timezone"
+                ]
+              },
+              {
+                "group": "Proyecto",
+                "pages": ["es/reference/credits"]
+              },
+              {
+                "group": "Notas de versión",
+                "pages": ["es/reference/RELEASING", "es/reference/test"]
+              },
+              {
+                "group": "Experimentos",
+                "pages": [
+                  "es/experiments/onboarding-config-protocol",
+                  "es/experiments/research/memory",
+                  "es/experiments/proposals/model-config"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Ayuda",
+            "groups": [
+              {
+                "group": "Ayuda",
+                "pages": ["es/help/index", "es/help/troubleshooting", "es/help/faq"]
+              },
+              {
+                "group": "Comunidad",
+                "pages": ["es/start/lore"]
+              },
+              {
+                "group": "Entorno y depuración",
+                "pages": ["es/help/environment", "es/help/debugging", "es/help/testing", "es/help/scripts"]
+              },
+              {
+                "group": "Runtime de Node",
+                "pages": ["es/install/node"]
+              },
+              {
+                "group": "Internos de compactación",
+                "pages": ["es/reference/session-management-compaction"]
+              },
+              {
+                "group": "Configuración de desarrollo",
+                "pages": ["es/start/setup"]
+              },
+              {
+                "group": "Contribuir",
+                "pages": ["es/ci"]
+              },
+              {
+                "group": "Meta de documentación",
+                "pages": ["es/start/hubs", "es/start/docs-directory"]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

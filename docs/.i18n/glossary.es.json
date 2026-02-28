@@ -1,0 +1,282 @@
+[
+  {
+    "source": "OpenClaw",
+    "target": "OpenClaw"
+  },
+  {
+    "source": "Gateway",
+    "target": "Gateway"
+  },
+  {
+    "source": "Pi",
+    "target": "Pi"
+  },
+  {
+    "source": "Skills",
+    "target": "Skills"
+  },
+  {
+    "source": "Skills config",
+    "target": "configuración de Skills"
+  },
+  {
+    "source": "Skills Config",
+    "target": "Configuración de Skills"
+  },
+  {
+    "source": "local loopback",
+    "target": "local loopback"
+  },
+  {
+    "source": "Tailscale",
+    "target": "Tailscale"
+  },
+  {
+    "source": "Getting Started",
+    "target": "Primeros pasos"
+  },
+  {
+    "source": "Getting started",
+    "target": "Primeros pasos"
+  },
+  {
+    "source": "Quick start",
+    "target": "Inicio rápido"
+  },
+  {
+    "source": "Quick Start",
+    "target": "Inicio rápido"
+  },
+  {
+    "source": "Docs directory",
+    "target": "Directorio de documentación"
+  },
+  {
+    "source": "Credits",
+    "target": "Créditos"
+  },
+  {
+    "source": "Features",
+    "target": "Características"
+  },
+  {
+    "source": "DMs",
+    "target": "mensajes directos"
+  },
+  {
+    "source": "DM",
+    "target": "mensaje directo"
+  },
+  {
+    "source": "sandbox",
+    "target": "sandbox"
+  },
+  {
+    "source": "Sandbox",
+    "target": "Sandbox"
+  },
+  {
+    "source": "sandboxing",
+    "target": "aislamiento en sandbox"
+  },
+  {
+    "source": "Sandboxing",
+    "target": "Aislamiento en sandbox"
+  },
+  {
+    "source": "sandboxed",
+    "target": "aislado en sandbox"
+  },
+  {
+    "source": "Sandboxed",
+    "target": "Aislado en sandbox"
+  },
+  {
+    "source": "Companion apps",
+    "target": "Aplicaciones complementarias"
+  },
+  {
+    "source": "block streaming",
+    "target": "transmisión por bloques"
+  },
+  {
+    "source": "Block streaming",
+    "target": "Transmisión por bloques"
+  },
+  {
+    "source": "Discovery + transports",
+    "target": "Descubrimiento + transportes"
+  },
+  {
+    "source": "Discovery",
+    "target": "Descubrimiento"
+  },
+  {
+    "source": "Network model",
+    "target": "Modelo de red"
+  },
+  {
+    "source": "for full details",
+    "target": "para más detalles"
+  },
+  {
+    "source": "First 60 seconds",
+    "target": "Los primeros 60 segundos"
+  },
+  {
+    "source": "Auth: where it lives (important)",
+    "target": "Credenciales: dónde se almacenan (importante)"
+  },
+  {
+    "source": "agent",
+    "target": "agente"
+  },
+  {
+    "source": "channel",
+    "target": "canal"
+  },
+  {
+    "source": "session",
+    "target": "sesión"
+  },
+  {
+    "source": "provider",
+    "target": "proveedor"
+  },
+  {
+    "source": "model",
+    "target": "modelo"
+  },
+  {
+    "source": "tool",
+    "target": "herramienta"
+  },
+  {
+    "source": "CLI",
+    "target": "CLI"
+  },
+  {
+    "source": "install sanity",
+    "target": "verificación de instalación"
+  },
+  {
+    "source": "get unstuck",
+    "target": "resolver problemas"
+  },
+  {
+    "source": "troubleshooting",
+    "target": "solución de problemas"
+  },
+  {
+    "source": "FAQ",
+    "target": "Preguntas frecuentes"
+  },
+  {
+    "source": "onboarding",
+    "target": "configuración inicial"
+  },
+  {
+    "source": "Onboarding",
+    "target": "Configuración inicial"
+  },
+  {
+    "source": "wizard",
+    "target": "asistente de configuración"
+  },
+  {
+    "source": "environment variables",
+    "target": "variables de entorno"
+  },
+  {
+    "source": "environment variable",
+    "target": "variable de entorno"
+  },
+  {
+    "source": "env vars",
+    "target": "variables de entorno"
+  },
+  {
+    "source": "env var",
+    "target": "variable de entorno"
+  },
+  {
+    "source": "expected keys",
+    "target": "claves esperadas"
+  },
+  {
+    "source": "Sandboxing note",
+    "target": "Nota sobre sandbox"
+  },
+  {
+    "source": "token",
+    "target": "token"
+  },
+  {
+    "source": "prompt",
+    "target": "prompt"
+  },
+  {
+    "source": "webhook",
+    "target": "webhook"
+  },
+  {
+    "source": "middleware",
+    "target": "middleware"
+  },
+  {
+    "source": "daemon",
+    "target": "daemon"
+  },
+  {
+    "source": "workspace",
+    "target": "espacio de trabajo"
+  },
+  {
+    "source": "Workspace",
+    "target": "Espacio de trabajo"
+  },
+  {
+    "source": "pairing",
+    "target": "emparejamiento"
+  },
+  {
+    "source": "Pairing",
+    "target": "Emparejamiento"
+  },
+  {
+    "source": "compaction",
+    "target": "compactación"
+  },
+  {
+    "source": "Compaction",
+    "target": "Compactación"
+  },
+  {
+    "source": "context window",
+    "target": "ventana de contexto"
+  },
+  {
+    "source": "message",
+    "target": "mensaje"
+  },
+  {
+    "source": "messages",
+    "target": "mensajes"
+  },
+  {
+    "source": "failover",
+    "target": "conmutación por error"
+  },
+  {
+    "source": "Failover",
+    "target": "Conmutación por error"
+  },
+  {
+    "source": "cron job",
+    "target": "tarea programada"
+  },
+  {
+    "source": "Cron job",
+    "target": "Tarea programada"
+  }
+]

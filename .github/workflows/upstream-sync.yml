@@ -1,0 +1,105 @@
+name: Upstream Sync + Translate
+
+on:
+  schedule:
+    # 1st and 15th of each month at 06:00 UTC
+    - cron: '0 6 1,15 * *'
+  workflow_dispatch:
+    inputs:
+      max_docs:
+        description: 'Maximum number of docs to translate'
+        required: false
+        default: '30'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-and-translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/openclaw/openclaw.git || true
+          git fetch upstream main
+
+      - name: Merge upstream changes
+        id: merge
+        run: |
+          git merge upstream/main --no-edit --allow-unrelated-histories || {
+            echo "merge_conflict=true" >> "$GITHUB_OUTPUT"
+            git merge --abort
+            exit 1
+          }
+          # Check if there are new changes
+          if git diff --quiet HEAD~1 -- docs/; then
+            echo "docs_changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "docs_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Go
+        if: steps.merge.outputs.docs_changed == 'true'
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build translation tool
+        if: steps.merge.outputs.docs_changed == 'true'
+        run: |
+          cd scripts/docs-i18n
+          go build -o docs-i18n .
+
+      - name: Translate new/modified docs
+        if: steps.merge.outputs.docs_changed == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          MAX_DOCS=${{ github.event.inputs.max_docs || '30' }}
+          cd scripts/docs-i18n
+          ./docs-i18n \
+            -lang es \
+            -src en \
+            -docs ../../docs \
+            -mode doc \
+            -thinking high \
+            -max "$MAX_DOCS"
+
+      - name: Create sync branch and PR
+        if: steps.merge.outputs.docs_changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="sync/upstream-$(date +%Y-%m-%d)"
+          git checkout -b "$BRANCH"
+          git add -A
+          git commit -m "sync: merge upstream + translate docs to Spanish ($(date +%Y-%m-%d))" || exit 0
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Sync upstream + traducción al español ($(date +%Y-%m-%d))" \
+            --body "$(cat <<'EOF'
+          ## Sincronización automática
+
+          - Merge de cambios desde openclaw/openclaw
+          - Traducción automática de documentación nueva/modificada al español
+          - Revisión manual recomendada antes de merge
+
+          ### Verificación
+          - [ ] Traducciones legibles y correctas
+          - [ ] Links internos funcionan
+          - [ ] No hay conflictos con traducciones existentes
+          EOF
+          )" \
+            --base main

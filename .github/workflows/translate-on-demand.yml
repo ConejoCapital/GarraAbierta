@@ -1,0 +1,84 @@
+name: Translate On Demand
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_docs:
+        description: 'Maximum number of docs to translate'
+        required: true
+        default: '10'
+      overwrite:
+        description: 'Overwrite existing translations'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build translation tool
+        run: |
+          cd scripts/docs-i18n
+          go build -o docs-i18n .
+
+      - name: Run translation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          OVERWRITE_FLAG=""
+          if [ "${{ github.event.inputs.overwrite }}" = "true" ]; then
+            OVERWRITE_FLAG="-overwrite"
+          fi
+          cd scripts/docs-i18n
+          ./docs-i18n \
+            -lang es \
+            -src en \
+            -docs ../../docs \
+            -mode doc \
+            -thinking high \
+            -max ${{ github.event.inputs.max_docs }} \
+            $OVERWRITE_FLAG
+
+      - name: Create translation branch and PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="translate/es-$(date +%Y-%m-%d-%H%M%S)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add docs/es/ docs/.i18n/es.tm.jsonl
+          git commit -m "docs(es): translate ${{ github.event.inputs.max_docs }} docs to Spanish" || exit 0
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Traducción al español (${{ github.event.inputs.max_docs }} docs)" \
+            --body "$(cat <<'EOF'
+          ## Traducción bajo demanda
+
+          - Docs traducidos: ${{ github.event.inputs.max_docs }}
+          - Sobreescribir existentes: ${{ github.event.inputs.overwrite }}
+
+          ### Verificación
+          - [ ] Traducciones legibles y correctas
+          - [ ] Glosario aplicado consistentemente
+          EOF
+          )" \
+            --base main
